@@ -13,7 +13,7 @@ const Login = ({ onLogin }) => {
     console.log("🔥 Login button clicked ");
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/login', {
+      const res = await fetch('http://host.docker.internal:5000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const Login = ({ onLogin }) => {
       console.error(error);
       alert("Server error");
     }
-  };  // ✅ THIS WAS MISSING
+  };  
 
   return (
     <div className="login-container">
