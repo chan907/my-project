@@ -13,7 +13,7 @@ const Login = ({ onLogin }) => {
     console.log("🔥 Login button clicked ");
 
     try {
-      const res = await fetch('http://host.docker.internal:5000/api/auth/login', {
+      const res = await fetch('http://backend-container:5000/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
