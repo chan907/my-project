@@ -6,7 +6,11 @@ require('dotenv').config();
 const app = express();
 const authRoutes = require('./routes/authRoutes');
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:9092",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 
